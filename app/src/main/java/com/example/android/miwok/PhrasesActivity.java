@@ -14,7 +14,9 @@ import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
-    /** Handles playback of all the sound files */
+    /**
+     * Handles playback of all the sound files
+     */
     private MediaPlayer mMediaPlayer;
 
     /**
@@ -36,20 +38,20 @@ public class PhrasesActivity extends AppCompatActivity {
 
         // ArrayList of Word objects
         final ArrayList<Word> primaryLanguage = new ArrayList<Word>();
-        primaryLanguage.add(new Word("Where are you going?","minto wuksus",
+        primaryLanguage.add(new Word("Where are you going?", "minto wuksus",
                 R.raw.phrase_where_are_you_going));
-        primaryLanguage.add(new Word("What is your name?","tinnә oyaase'nә",
+        primaryLanguage.add(new Word("What is your name?", "tinnә oyaase'nә",
                 R.raw.phrase_what_is_your_name));
-        primaryLanguage.add(new Word("My name is...","oyaaset...",R.raw.phrase_my_name_is));
-        primaryLanguage.add(new Word("How are you feeling?","michәksәs?",
+        primaryLanguage.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        primaryLanguage.add(new Word("How are you feeling?", "michәksәs?",
                 R.raw.phrase_how_are_you_feeling));
-        primaryLanguage.add(new Word("I’m feeling good.","kuchi achit",
+        primaryLanguage.add(new Word("I’m feeling good.", "kuchi achit",
                 R.raw.phrase_im_feeling_good));
-        primaryLanguage.add(new Word("Are you coming?","әәnәs'aa?",R.raw.phrase_are_you_coming));
-        primaryLanguage.add(new Word("Yes, I’m coming.","hәә’ әәnәm",R.raw.phrase_yes_im_coming));
-        primaryLanguage.add(new Word("I’m coming.","әәnәm",R.raw.phrase_im_coming));
-        primaryLanguage.add(new Word("Let’s go.","yoowutis",R.raw.phrase_lets_go));
-        primaryLanguage.add(new Word("Come here.","әnni'nem",R.raw.phrase_come_here));
+        primaryLanguage.add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        primaryLanguage.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        primaryLanguage.add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        primaryLanguage.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        primaryLanguage.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
         //Creat a {@link WordAdapter}, whose data source is a list of
         //{@link Word}s. The adaptor knows how to create list item views for each item in the list
@@ -60,7 +62,7 @@ public class PhrasesActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         //Set click listener to play the pronunciation when the list item is clicked
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
@@ -83,7 +85,7 @@ public class PhrasesActivity extends AppCompatActivity {
 
     //Releases media player resources when app is stopped
     @Override
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
         releaseMediaPlayer();
     }
